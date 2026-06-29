@@ -1,0 +1,282 @@
+/* ============================================================
+   components.css  |  Form Styles + Responsive Breakpoints
+   ============================================================ */
+
+/* ── CONTACT FORM ────────────────────────────────────────── */
+.contact-form-wrap {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--space-md) var(--space-lg);
+}
+.form-title {
+  font-family: var(--f-display);
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  color: var(--c-white);
+  margin-bottom: var(--space-md);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: var(--space-sm);
+}
+.form-group label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--c-white);
+  padding: 0.75rem 1rem;
+  font-family: var(--f-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  border-radius: 0;
+  width: 100%;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--c-accent-2);
+}
+.form-group select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.4)' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+.form-group select option {
+  background: var(--c-slate);
+  color: var(--c-white);
+}
+.form-group textarea { resize: vertical; min-height: 110px; }
+
+/* Success message */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: var(--space-lg);
+  color: var(--c-white);
+}
+.form-success.active { display: block; }
+.form-success h3 {
+  font-family: var(--f-display);
+  font-size: 2.5rem;
+  color: var(--c-accent-2);
+  margin-bottom: var(--space-sm);
+}
+
+/* ── SCROLL ANIMATIONS ───────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── TABLET (≤1024px) ────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+  .about-photo-stack {
+    height: 420px;
+    max-width: 560px;
+  }
+  .endorsements-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .endorsement-card--featured {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+  .issue-block,
+  .issue-block--reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+  .vote-layout {
+    grid-template-columns: 1fr;
+  }
+  .vote-photo-stack {
+    height: 380px;
+  }
+  .donate-layout {
+    grid-template-columns: 1fr;
+  }
+  .donate-photo {
+    min-height: 300px;
+  }
+  .donate-photo::after {
+    background: linear-gradient(to bottom, transparent 50%, var(--c-white));
+  }
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+  .contact-photo-strip {
+    grid-template-columns: repeat(3, 1fr);
+    height: 180px;
+  }
+  .contact-photo-strip .strip-photo:nth-child(n+4) {
+    display: none;
+  }
+  .about-photo-row {
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+  }
+  .about-photo-item {
+    aspect-ratio: 4/3;
+  }
+  .about-photo-item--tall {
+    transform: none;
+  }
+  .about-photo-row .graphic-placeholder--tall {
+    display: none;
+  }
+}
+
+/* ── MOBILE (≤768px) ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --space-xl: 4rem;
+    --space-xxl: 6rem;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0; right: 0;
+    width: 80vw;
+    max-width: 320px;
+    height: 100svh;
+    background: var(--c-ink);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6rem var(--space-md) var(--space-md);
+    gap: var(--space-md);
+    transform: translateX(100%);
+    transition: transform 0.35s var(--ease-out);
+    z-index: 99;
+  }
+  .nav-links.open { transform: translateX(0); }
+  .nav-links a { font-size: 1rem; }
+  .nav-toggle { display: flex; z-index: 100; }
+
+  .hero-photo-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .hero-photo--3 { grid-column: 1 / 3; grid-row: 1; }
+  .hero-photo--1 { grid-column: 1; grid-row: 2; }
+  .hero-photo--2 { grid-column: 2; grid-row: 2; }
+  .hero-photo--4 { grid-column: 1; grid-row: 3; }
+  .hero-photo--5 { grid-column: 2; grid-row: 3; }
+
+  .hero-content { padding: 0 1rem 4rem; }
+
+  .hero-cta-group { flex-direction: column; }
+  .hero-cta-group .btn { width: 100%; text-align: center; }
+
+  .about-photo-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .endorsements-grid {
+    grid-template-columns: 1fr;
+  }
+  .endorsement-card--featured {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .issues-collage {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 180px);
+  }
+  .collage-item--a { grid-column: 1 / 3; }
+  .collage-item--b, .collage-item--c { grid-column: auto; }
+  .collage-item--d, .collage-item--e { grid-column: auto; }
+
+  .form-row { grid-template-columns: 1fr; }
+
+  .donate-amounts { gap: 0.5rem; }
+  .donate-btn { padding: 0.6rem 1rem; font-size: 0.9rem; }
+
+  .footer-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+  .footer-nav {
+    gap: var(--space-sm);
+  }
+
+  .org-grid { gap: 0.5rem; }
+  .org-logo-slot { padding: 0.5rem 1rem; font-size: 0.7rem; }
+
+  .about-stats { flex-wrap: wrap; gap: var(--space-sm); }
+
+  .contact-form-wrap { padding: var(--space-md); }
+}
+
+/* ── REDUCED MOTION ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .ticker-inner { animation: none; }
+  .headline-line { opacity: 1; transform: none; }
+  .hero-sub, .hero-cta-group { opacity: 1; }
+  .reveal, .reveal-left, .reveal-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── PRINT ───────────────────────────────────────────────── */
+@media print {
+  .nav, .hero-photo-grid, .ticker-strip, .hero-scroll-indicator { display: none; }
+  .hero-content { padding: 2rem; }
+  .section { padding: 2rem 0; }
+}

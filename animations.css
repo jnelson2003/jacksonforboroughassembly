@@ -1,0 +1,205 @@
+/* ============================================================
+   animations.css  |  Keyframes + Micro-interactions
+   ============================================================ */
+
+/* ── KEYFRAMES ───────────────────────────────────────────── */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scrollDrop {
+  0%   { top: -100%; opacity: 1; }
+  100% { top: 100%;  opacity: 0; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.04); }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-8deg) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-8deg) scale(1);
+  }
+}
+
+@keyframes borderPulse {
+  0%, 100% { border-color: var(--c-accent); }
+  50%       { border-color: var(--c-accent-2); }
+}
+
+/* ── HOVER MICRO-INTERACTIONS ────────────────────────────── */
+.photo-frame--main {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.photo-frame--main:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 11px 11px 0 var(--c-accent);
+}
+
+.issue-block:hover .issue-photo {
+  transform: scale(1.02);
+  transition: transform 0.5s ease;
+}
+.issue-photo {
+  transition: transform 0.5s ease;
+  overflow: hidden;
+}
+
+.endorsement-card {
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.endorsement-card:hover {
+  transform: translateY(-4px);
+}
+
+.vote-step {
+  transition: background 0.2s;
+  border-radius: 0;
+  padding: var(--space-sm);
+  margin: 0 calc(-1 * var(--space-sm));
+}
+.vote-step:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.org-logo-slot {
+  transition: background 0.2s, transform 0.2s;
+}
+.org-logo-slot:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Strip photo hover zoom */
+.strip-photo {
+  overflow: hidden;
+  transition: filter 0.3s ease;
+}
+.strip-photo > * {
+  transition: transform 0.5s ease;
+}
+.strip-photo:hover {
+  filter: brightness(1.1);
+}
+
+/* About photo items */
+.about-photo-item {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: zoom-in;
+}
+.about-photo-item:hover {
+  transform: scale(1.02);
+  filter: brightness(1.08);
+  z-index: 2;
+}
+
+/* Collage items */
+.collage-item {
+  transition: transform 0.4s ease, filter 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+.collage-item:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+  z-index: 2;
+}
+
+/* Donate button */
+.donate-btn {
+  transition: background 0.15s ease, color 0.15s ease,
+              border-color 0.15s ease, transform 0.15s ease;
+}
+.donate-btn:hover {
+  transform: translateY(-2px);
+}
+.donate-btn:active {
+  transform: translateY(0);
+}
+
+/* Sticker rotate pulse */
+.graphic-placeholder--sticker {
+  animation: rotateIn 0.6s var(--ease-out) 1s both;
+}
+.graphic-placeholder--sticker:hover {
+  animation: borderPulse 1.5s ease-in-out infinite;
+}
+
+/* Nav link underline */
+.nav-links a {
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--c-accent-2);
+  transition: width 0.25s ease;
+}
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.nav-donate::after { display: none; }
+
+/* Social link */
+.social-link {
+  position: relative;
+}
+
+/* Election date badge pulse */
+.election-date-badge {
+  animation: fadeIn 0.8s ease 0.3s both;
+}
+
+/* Form input transitions already handled in components.css */
+
+/* ── PHOTO GRID HOVER (HERO) ─────────────────────────────── */
+.hero-photo {
+  transition: transform 8s ease, filter 0.4s ease;
+  cursor: pointer;
+}
+.hero-photo:hover {
+  filter: brightness(1.15) saturate(1.1);
+}
+
+/* Scroll reveal stagger delay helpers */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
