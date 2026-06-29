@@ -6,16 +6,16 @@
 /* ── TOKENS ──────────────────────────────────────────────── */
 :root {
   /* Palette */
-  --c-black:      #0a0a0a;
-  --c-ink:        #111217;
-  --c-slate:      #1c1f2a;
-  --c-mid:        #3d3f4f;
-  --c-mist:       #8a8fa0;
-  --c-light:      #e8e6e0;
-  --c-white:      #f9f8f5;
-  --c-accent:     #d94f3a;   /* campaign red — bold, civic urgency  */
-  --c-accent-2:   #f5a623;   /* warm amber — energy, optimism       */
-  --c-accent-dark:#a83222;
+  --c-black:      #04080f;
+  --c-ink:        #0b1120;
+  --c-slate:      #0f1e3a;
+  --c-mid:        #2c3a5a;
+  --c-mist:       #7a8fbb;
+  --c-light:      #dce6f5;
+  --c-white:      #f4f7fd;
+  --c-accent:     #1a56db;   /* campaign blue — strong, civic trust */
+  --c-accent-2:   #38bdf8;   /* sky blue — energy, forward motion   */
+  --c-accent-dark:#1240a8;
 
   /* Typography */
   --f-display: 'Bebas Neue', 'Impact', sans-serif;
