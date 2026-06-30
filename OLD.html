@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jackson for Borough Assembly</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="logo-mark">J</span>
+      <span class="logo-text">JACKSON <span class="logo-sub">FOR BOROUGH ASSEMBLY</span></span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#endorsements">Endorsements</a></li>
+      <li><a href="#issues">The Issues</a></li>
+      <li><a href="#vote">Vote</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#donate" class="nav-donate">Donate</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-photo-grid">
+      <!-- REPLACE: Hero background collage photos -->
+      <div class="hero-photo hero-photo--1" style="background-image:url('EE-26-8249-346.jpg')"></div>
+      <div class="hero-photo hero-photo--2" style="background-image:url('EE-26-8249-346.jpg')"></div>
+      <div class="hero-photo hero-photo--3" style="background-image:url('EE-26-8249-346.jpg')"></div>
+      <div class="hero-photo hero-photo--4" style="background-image:url('EE-26-8249-346.jpg')"></div>
+      <div class="hero-photo hero-photo--5" style="background-image:url('EE-26-8249-346.jpg')"></div>
+      <div class="hero-photo hero-photo--6" style="background-image:url('EE-26-8249-346.jpg')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Borough Assembly · District [#]</div>
+      <h1 class="hero-headline">
+        <span class="headline-line line-1">REAL</span>
+        <span class="headline-line line-2">CHANGE</span>
+        <span class="headline-line line-3 italic">starts here.</span>
+      </h1>
+      <p class="hero-sub">Jackson is running for Borough Assembly to build a district that actually works for all of us.</p>
+      <div class="hero-cta-group">
+        <a href="#vote" class="btn btn--primary">How to Vote</a>
+        <a href="#donate" class="btn btn--outline">Donate Now</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- GRAPHIC BANNER STRIP -->
+  <div class="ticker-strip">
+    <div class="ticker-inner">
+      <span>VOTE JACKSON &nbsp;·&nbsp;</span>
+      <span>BOROUGH ASSEMBLY &nbsp;·&nbsp;</span>
+      <span>YOUR VOICE MATTERS &nbsp;·&nbsp;</span>
+      <span>VOTE JACKSON &nbsp;·&nbsp;</span>
+      <span>BOROUGH ASSEMBLY &nbsp;·&nbsp;</span>
+      <span>YOUR VOICE MATTERS &nbsp;·&nbsp;</span>
+      <span>VOTE JACKSON &nbsp;·&nbsp;</span>
+      <span>BOROUGH ASSEMBLY &nbsp;·&nbsp;</span>
+      <span>YOUR VOICE MATTERS &nbsp;·&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ABOUT JACKSON -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-eyebrow">About Jackson</div>
+      <div class="about-layout">
+
+        <div class="about-photo-stack">
+          <!-- REPLACE: Main portrait photo -->
+          <div class="photo-frame photo-frame--main" style="background-image:url('EE-26-8249-346.jpg')">
+            <div class="photo-label">Jackson [Last Name]</div>
+          </div>
+          <!-- REPLACE: Community photo 1 -->
+          <div class="photo-frame photo-frame--secondary" style="background-image:url('EE-26-8249-346.jpg')"></div>
+          <!-- REPLACE: Community photo 2 -->
+          <div class="photo-frame photo-frame--tertiary" style="background-image:url('EE-26-8249-346.jpg')"></div>
+          <!-- ADD YOUR GRAPHIC HERE: Campaign sticker or logo mark -->
+          <div class="graphic-placeholder graphic-placeholder--sticker">
+            <span>+ ADD GRAPHIC</span>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <h2 class="section-title">Born Here.<br>Built for This.</h2>
+          <p class="about-body">
+            Jackson has spent [X] years embedded in this community — organizing, advocating, and showing up when it counts. This isn't a stepping stone. This is home.
+          </p>
+          <p class="about-body">
+            From [neighborhood] to [neighborhood], Jackson knows the streets, the schools, and the struggles our district faces. A seat on the Borough Assembly means real decisions get made by someone who actually lives with the consequences.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">[X]+</span>
+              <span class="stat-label">Years in the Community</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">[X]</span>
+              <span class="stat-label">Doors Knocked</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">[X]k</span>
+              <span class="stat-label">Neighbors Reached</span>
+            </div>
+          </div>
+          <a href="#issues" class="btn btn--primary">See the Platform</a>
+        </div>
+
+      </div>
+
+      <!-- ABOUT PHOTO ROW -->
+      <div class="about-photo-row">
+        <!-- REPLACE: 4 candid / action photos -->
+        <div class="about-photo-item" style="background-image:url('EE-26-8249-346.jpg')">
+          <div class="photo-caption">Community outreach, [Year]</div>
+        </div>
+        <div class="about-photo-item about-photo-item--tall" style="background-image:url('EE-26-8249-346.jpg')">
+          <div class="photo-caption">Town hall, [Location]</div>
+        </div>
+        <div class="about-photo-item" style="background-image:url('EE-26-8249-346.jpg')">
+          <div class="photo-caption">Neighborhood cleanup</div>
+        </div>
+        <div class="about-photo-item about-photo-item--tall" style="background-image:url('EE-26-8249-346.jpg')">
+          <div class="photo-caption">Meeting with residents</div>
+        </div>
+        <!-- ADD YOUR GRAPHIC: Campaign art or illustration -->
+        <div class="about-photo-item graphic-placeholder graphic-placeholder--tall">
+          <span>+ ADD GRAPHIC<br>OR PHOTO</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ENDORSEMENTS -->
+  <section class="endorsements section section--dark" id="endorsements">
+    <div class="container">
+      <div class="section-eyebrow light">Endorsements</div>
+      <h2 class="section-title light">People Who <em>Know</em></h2>
+      <p class="section-intro light">Leaders and neighbors from across the district are backing Jackson. Here's why.</p>
+
+      <div class="endorsements-grid">
+
+        <div class="endorsement-card endorsement-card--featured">
+          <!-- REPLACE: Featured endorser photo -->
+          <div class="endorsement-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+          <div class="endorsement-body">
+            <p class="endorsement-quote">"[Add a powerful quote from your top endorser here. Something specific and personal lands best.]"</p>
+            <div class="endorsement-meta">
+              <span class="endorsement-name">[Name]</span>
+              <span class="endorsement-title">[Title / Organization]</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="endorsement-card">
+          <div class="endorsement-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+          <p class="endorsement-quote">"[Quote from endorser 2]"</p>
+          <div class="endorsement-meta">
+            <span class="endorsement-name">[Name]</span>
+            <span class="endorsement-title">[Title]</span>
+          </div>
+        </div>
+
+        <div class="endorsement-card">
+          <div class="endorsement-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+          <p class="endorsement-quote">"[Quote from endorser 3]"</p>
+          <div class="endorsement-meta">
+            <span class="endorsement-name">[Name]</span>
+            <span class="endorsement-title">[Title]</span>
+          </div>
+        </div>
+
+        <div class="endorsement-card">
+          <div class="endorsement-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+          <p class="endorsement-quote">"[Quote from endorser 4]"</p>
+          <div class="endorsement-meta">
+            <span class="endorsement-name">[Name]</span>
+            <span class="endorsement-title">[Title]</span>
+          </div>
+        </div>
+
+        <div class="endorsement-card">
+          <div class="endorsement-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+          <p class="endorsement-quote">"[Quote from endorser 5]"</p>
+          <div class="endorsement-meta">
+            <span class="endorsement-name">[Name]</span>
+            <span class="endorsement-title">[Title]</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ORGANIZATIONAL ENDORSEMENTS -->
+      <div class="org-endorsements">
+        <div class="org-eyebrow">Organizations &amp; Unions</div>
+        <div class="org-grid">
+          <!-- REPLACE: Add organization logos or names -->
+          <div class="org-logo-slot"><span>[Org Name]</span></div>
+          <div class="org-logo-slot"><span>[Union Name]</span></div>
+          <div class="org-logo-slot"><span>[PAC / Group]</span></div>
+          <div class="org-logo-slot"><span>[Org Name]</span></div>
+          <div class="org-logo-slot"><span>[Coalition]</span></div>
+          <div class="org-logo-slot"><span>[Org Name]</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- THE ISSUES -->
+  <section class="issues section" id="issues">
+    <div class="container">
+      <div class="section-eyebrow">Platform</div>
+      <h2 class="section-title">The Issues</h2>
+
+      <div class="issues-layout">
+
+        <!-- ISSUE 1 -->
+        <div class="issue-block">
+          <div class="issue-photo-wrap">
+            <!-- REPLACE: Issue 1 photo -->
+            <div class="issue-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+            <!-- ADD YOUR GRAPHIC: Issue icon or illustration -->
+            <div class="issue-number">01</div>
+          </div>
+          <div class="issue-text">
+            <h3 class="issue-title">Housing That's Actually Affordable</h3>
+            <p class="issue-body">Too many residents are being priced out of the neighborhoods they built. Jackson will push for [specific policy], protect renters from [specific issue], and ensure development serves the community — not just developers.</p>
+            <ul class="issue-points">
+              <li>Expand affordable housing stock</li>
+              <li>Tenant protections and rent stabilization</li>
+              <li>Community land trusts</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ISSUE 2 -->
+        <div class="issue-block issue-block--reverse">
+          <div class="issue-photo-wrap">
+            <!-- REPLACE: Issue 2 photo -->
+            <div class="issue-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+            <div class="issue-number">02</div>
+          </div>
+          <div class="issue-text">
+            <h3 class="issue-title">Public Safety Done Right</h3>
+            <p class="issue-body">Safety means more than policing. Jackson believes in a whole-community approach — mental health response teams, youth programs, lit streets, and public spaces everyone actually wants to be in.</p>
+            <ul class="issue-points">
+              <li>Co-responder mental health programs</li>
+              <li>Youth investment and after-school funding</li>
+              <li>Community-led violence prevention</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ISSUE 3 -->
+        <div class="issue-block">
+          <div class="issue-photo-wrap">
+            <!-- REPLACE: Issue 3 photo -->
+            <div class="issue-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+            <div class="issue-number">03</div>
+          </div>
+          <div class="issue-text">
+            <h3 class="issue-title">A Greener, Cleaner Borough</h3>
+            <p class="issue-body">Climate change isn't coming — it's here. Jackson will fight for green infrastructure, clean energy transition, and environmental justice for the neighborhoods that have borne the biggest burden.</p>
+            <ul class="issue-points">
+              <li>Green infrastructure investment</li>
+              <li>Emissions reduction targets</li>
+              <li>Environmental justice for frontline communities</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ISSUE 4 -->
+        <div class="issue-block issue-block--reverse">
+          <div class="issue-photo-wrap">
+            <!-- REPLACE: Issue 4 photo -->
+            <div class="issue-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+            <div class="issue-number">04</div>
+          </div>
+          <div class="issue-text">
+            <h3 class="issue-title">An Economy That Works For Everyone</h3>
+            <p class="issue-body">Small businesses are the backbone of our district. Jackson will champion local hiring, support small business owners, and make sure economic growth benefits longtime residents — not just newcomers.</p>
+            <ul class="issue-points">
+              <li>Local hiring requirements on public contracts</li>
+              <li>Small business support and grants</li>
+              <li>Anti-displacement policies</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ISSUES PHOTO COLLAGE -->
+      <div class="issues-collage">
+        <!-- REPLACE/ADD: Campaign photos and graphics in collage format -->
+        <div class="collage-item collage-item--a" style="background-image:url('EE-26-8249-346.jpg')"></div>
+        <div class="collage-item collage-item--b" style="background-image:url('EE-26-8249-346.jpg')"></div>
+        <div class="collage-item collage-item--c graphic-placeholder"><span>+ ADD GRAPHIC</span></div>
+        <div class="collage-item collage-item--d" style="background-image:url('EE-26-8249-346.jpg')"></div>
+        <div class="collage-item collage-item--e" style="background-image:url('EE-26-8249-346.jpg')"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VOTE -->
+  <section class="vote section section--accent" id="vote">
+    <div class="container">
+      <div class="vote-layout">
+        <div class="vote-text">
+          <div class="section-eyebrow light">Make It Count</div>
+          <h2 class="section-title light">How to Vote</h2>
+          <p class="vote-intro">Election Day is <strong>[DATE]</strong>. Here's everything you need to know to make your voice heard.</p>
+
+          <div class="vote-steps">
+            <div class="vote-step">
+              <div class="step-icon">✓</div>
+              <div class="step-content">
+                <h4>Check Your Registration</h4>
+                <p>Make sure you're registered to vote in [Borough/District]. Deadline: <strong>[Date]</strong></p>
+                <a href="[REGISTRATION LINK]" class="step-link" target="_blank">Check Registration →</a>
+              </div>
+            </div>
+            <div class="vote-step">
+              <div class="step-icon">📍</div>
+              <div class="step-content">
+                <h4>Find Your Polling Place</h4>
+                <p>Your polling location is based on your registered address.</p>
+                <a href="[POLLING PLACE LINK]" class="step-link" target="_blank">Find Your Polling Place →</a>
+              </div>
+            </div>
+            <div class="vote-step">
+              <div class="step-icon">📬</div>
+              <div class="step-content">
+                <h4>Vote by Mail</h4>
+                <p>Request an absentee or mail-in ballot. Deadline: <strong>[Date]</strong></p>
+                <a href="[MAIL BALLOT LINK]" class="step-link" target="_blank">Request Mail Ballot →</a>
+              </div>
+            </div>
+            <div class="vote-step">
+              <div class="step-icon">🗓</div>
+              <div class="step-content">
+                <h4>Early Voting</h4>
+                <p>Early voting runs <strong>[Dates]</strong> at select locations.</p>
+                <a href="[EARLY VOTING LINK]" class="step-link" target="_blank">Early Voting Info →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vote-photo-stack">
+          <!-- REPLACE: Voting / civic engagement photos -->
+          <div class="vote-photo vote-photo--main" style="background-image:url('EE-26-8249-346.jpg')"></div>
+          <div class="vote-photo vote-photo--secondary" style="background-image:url('EE-26-8249-346.jpg')"></div>
+          <!-- ADD GRAPHIC: Ballot or vote graphic -->
+          <div class="vote-graphic graphic-placeholder">
+            <span>+ ADD<br>VOTE GRAPHIC</span>
+          </div>
+          <div class="election-date-badge">
+            <span class="badge-label">Election Day</span>
+            <span class="badge-date">[DATE]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE -->
+  <section class="donate section" id="donate">
+    <div class="container">
+      <div class="donate-layout">
+        <!-- REPLACE: Donation section background/photo -->
+        <div class="donate-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+        <div class="donate-content">
+          <div class="section-eyebrow">Support the Campaign</div>
+          <h2 class="section-title">Fuel the Movement</h2>
+          <p class="donate-body">Every dollar goes directly into knocking doors, reaching neighbors, and building the campaign that wins. No corporate PACs. Just people.</p>
+          <div class="donate-amounts">
+            <a href="[DONATE LINK]?amount=10" class="donate-btn" target="_blank">$10</a>
+            <a href="[DONATE LINK]?amount=25" class="donate-btn donate-btn--highlight" target="_blank">$25</a>
+            <a href="[DONATE LINK]?amount=50" class="donate-btn" target="_blank">$50</a>
+            <a href="[DONATE LINK]?amount=100" class="donate-btn" target="_blank">$100</a>
+            <a href="[DONATE LINK]" class="donate-btn donate-btn--custom" target="_blank">Other</a>
+          </div>
+          <a href="[DONATE LINK]" class="btn btn--primary btn--large" target="_blank">Donate Now →</a>
+          <p class="donate-legal">Paid for by Jackson for Borough Assembly. Contributions are not tax-deductible. [Add required legal disclosures here.]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section section--dark" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-text">
+          <div class="section-eyebrow light">Get Involved</div>
+          <h2 class="section-title light">Let's Connect</h2>
+          <p class="contact-body">Have questions? Want to volunteer, host a house party, or put up a yard sign? Reach out — we'd love to hear from you.</p>
+
+          <div class="contact-methods">
+            <a href="mailto:[EMAIL]" class="contact-item">
+              <span class="contact-icon">✉</span>
+              <span>[email@campaign.com]</span>
+            </a>
+            <a href="tel:[PHONE]" class="contact-item">
+              <span class="contact-icon">☎</span>
+              <span>[Phone Number]</span>
+            </a>
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <span>[Campaign Office Address]</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="[INSTAGRAM]" class="social-link" target="_blank">Instagram</a>
+            <a href="[TWITTER]" class="social-link" target="_blank">Twitter / X</a>
+            <a href="[FACEBOOK]" class="social-link" target="_blank">Facebook</a>
+            <a href="[TIKTOK]" class="social-link" target="_blank">TikTok</a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm">
+            <h3 class="form-title">Send a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">I want to...</label>
+              <select id="subject" name="subject">
+                <option value="">Select one</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="sign">Get a Yard Sign</option>
+                <option value="host">Host an Event</option>
+                <option value="question">Ask a Question</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us more..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send It →</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- CONTACT PHOTO STRIP -->
+      <div class="contact-photo-strip">
+        <!-- REPLACE: Campaign trail photos for footer strip -->
+        <div class="strip-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+        <div class="strip-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+        <div class="strip-photo strip-photo--graphic graphic-placeholder"><span>+ GRAPHIC</span></div>
+        <div class="strip-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+        <div class="strip-photo" style="background-image:url('EE-26-8249-346.jpg')"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-layout">
+        <div class="footer-brand">
+          <span class="logo-mark">J</span>
+          <div>
+            <div class="footer-name">JACKSON</div>
+            <div class="footer-sub">FOR BOROUGH ASSEMBLY</div>
+          </div>
+        </div>
+        <nav class="footer-nav">
+          <a href="#about">About</a>
+          <a href="#endorsements">Endorsements</a>
+          <a href="#issues">Issues</a>
+          <a href="#vote">Vote</a>
+          <a href="#contact">Contact</a>
+          <a href="#donate">Donate</a>
+        </nav>
+        <a href="#donate" class="btn btn--primary">Donate</a>
+      </div>
+      <div class="footer-legal">
+        <p>Paid for by Jackson for Borough Assembly. &copy; <span id="year"></span> All rights reserved.</p>
+        <p>[Required campaign finance disclosures here.]</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
